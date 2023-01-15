@@ -1,10 +1,8 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:libera/utils/constants.dart';
 
 Future<bool> login(String email, String senha) async {
-  // ignore: constant_identifier_names
-  const BASE_URL_USUARIO = 'http://localhost:9000/usuario/login';
-
   String username = 'fasda';
   String password = 'brcd2605';
   String basicAuth =
@@ -13,7 +11,7 @@ Future<bool> login(String email, String senha) async {
   final msg = jsonEncode({'login': email, 'senha': senha});
 
   var response = await http.post(
-    Uri.parse(BASE_URL_USUARIO),
+    Uri.parse('${Constants.BASE_URL_USUARIO}login'),
     headers: <String, String>{
       'authorization': basicAuth,
       'Content-Type': 'application/json'

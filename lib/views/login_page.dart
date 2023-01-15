@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:libera/login.dart';
+import 'package:libera/components/login.dart';
 
 
 class LoginPage extends StatefulWidget {
